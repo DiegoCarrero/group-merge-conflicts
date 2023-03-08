@@ -1,8 +1,8 @@
-function fn(...c) {
-  if (!c.every((a) => Number.isNumber(a)))
+function funk(...vari) {
+  if (!vari.every((aNum) => Number.isNumber(aNum)))
     throw "All arguments must be numbers.";
-  return c.reduce((a, b) => a + b);
+  return vari.reduce((aNum, bNum) => aNum + bNum);
 }
 
-fn(1, 2, 3); //> 6
-fn(10, "B", 20); //> error All arguments must be numbers.
+funk(1, 2, 3); //> 6
+funk(10, "B", 20); //> error All arguments must be numbers.
